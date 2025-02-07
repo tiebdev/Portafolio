@@ -1,0 +1,103 @@
+/* Asegurar que cada sección ocupe toda la pantalla */
+/* Todas las secciones estarán inicialmente invisibles */
+section {
+  min-height: 100vh; /* Mínimo 100% de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando una sección se vuelve visible */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+    background-color: #121212; /* Mantener fondo oscuro original */
+    color: #e0e0e0; /* Color de texto original */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: #1e1e1e ; /* Color de las tarjetas */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste de ancho y disposición en 'Sobre Mí' */
+#sobre-mi {
+  max-width: 800px; /* Limitar el ancho del contenido */
+  width: 90%; /* Ajuste responsive */
+  text-align: center; /* Alineación izquierda para mejor lectura */
+  margin: 0 auto; /* Centrar en pantalla */
+  padding: 2rem 0; /* Espaciado arriba y abajo */
+}
+
+/* Ajustes en la tipografía de 'Sobre Mí' */
+#sobre-mi h2 {
+  font-size: 2.5rem; /* Título más grande */
+  text-align: center;
+}
+
+#sobre-mi p {
+  font-size: 1.2rem; /* Fuente más grande para mejor lectura */
+  margin-top: 1rem;
+  line-height: 1.8; /* Espaciado entre líneas más cómodo */
+}
+
+#proyectos h2 {
+  font-size: 2.5rem; /* Título más grande */
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2.5rem; /* Título más grande */
+  text-align: center;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  align-items: center;
+  width: 100%;
+  background-color: #1e1e1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+/* Centrar los elementos del menú */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4f46e5; /* Cambia de color al pasar el mouse */
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIDO.DEV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="font-sans bg-gray-900 text-gray-200">
+
+    <!-- Barra de Navegación -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg py-4 z-50">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white"></h1>
+            <ul class="flex space-x-6">
+                <li><a href="#inicio" class="text-gray-300 hover:text-white">Inicio</a></li>
+                <li><a href="#sobre-mi" class="text-gray-300 hover:text-white">Sobre Mí</a></li>
+                <li><a href="#proyectos" class="text-gray-300 hover:text-white">Proyectos</a></li>
+                <li><a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Inicio -->
+<section id="inicio">
+  <h1 class="text-4xl font-bold">Ridouan Tieb</h1>
+  <p class="text-gray-400">Desarrollador de aplicaciones multiplataforma</p>
+</section>
+
+<!-- Sobre Mí -->
+<section id="sobre-mi">
+  <h2 class="text-3xl font-semibold">Sobre Mí</h2>
+  <p id="descripcion" class="text-gray-400"></p>
+  <p id="trayectoria" class="text-gray-400"></p>
+  <p id="especializacion" class="text-gray-400"></p>
+</section>
+
+
+<!-- Proyectos -->
+<section id="proyectos">
+  <h2 class="text-3xl font-semibold">Proyectos</h2>
+  <div id="proyectos-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto">
+  <h2 class="text-3xl font-semibold">Contacto</h2>
+  <p class="text-gray-400 mt-4">Puedes encontrarme en:</p>
+  <div class="mt-4">
+      <a id="linkedin" href="#" class="text-blue-500 mx-2">LinkedIn</a>
+      <a id="github" href="#" class="text-blue-500 mx-2">GitHub</a>
+  </div>
+
+  <!-- Barra de contacto con email -->
+  <div class="mt-6 flex justify-center items-center bg-gray-800 p-4 rounded-lg shadow-lg max-w-lg mx-auto">
+      <input id="email" type="text" readonly class="bg-gray-700 text-gray-200 w-full p-2 rounded-l-lg text-center">
+      <button id="sendEmail" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg">📩</button>
+      <button id="copyEmail" class="ml-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg">📄</button>
+  </div>
+  <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
+</section>
+
+
+      <!-- Notificación de Copiado -->
+      <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
+
+  </section>
+
+    <!-- Scripts -->
+    <script src="js/cargaProyectos.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/scrollSuave.js"></script>
+    <script src="js/cargaSobreMi.js"></script>
+    <script src="js/animaciones.js"></script>
+
+
+
+</body>
+</html>

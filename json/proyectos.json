@@ -1,0 +1,28 @@
+{
+  "proyectos": [
+      {
+          "nombre": "Sistema de Gestión de Clientes",
+          "descripcion": "Aplicación WPF con .NET para gestionar clientes, facturación y reportes.",
+          "tecnologias": "C#, WPF, SQL Server",
+          "link": "https://github.com/tuusuario/proyecto1"
+      },
+      {
+          "nombre": "API REST para E-Commerce",
+          "descripcion": "API RESTful en ASP.NET Core para manejar pedidos y clientes.",
+          "tecnologias": "ASP.NET Core, Entity Framework, SQL Server",
+          "link": "https://github.com/tuusuario/proyecto2"
+      },
+      {
+          "nombre": "Dashboard de Monitoreo",
+          "descripcion": "Interfaz en WPF que muestra estadísticas en tiempo real.",
+          "tecnologias": "WPF, C#, API REST",
+          "link": "https://github.com/tuusuario/proyecto3"
+      },
+      {
+        "nombre": "Dashboard de Monitoreo",
+        "descripcion": "Interfaz en WPF que muestra estadísticas en tiempo real.",
+        "tecnologias": "WPF, C#, API REST",
+        "link": "https://github.com/tuusuario/proyecto4"
+    }
+  ]
+}
