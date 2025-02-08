@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body class="font-sans bg-gray-900 text-gray-200">
 
     <!-- Barra de Navegación -->
@@ -16,7 +17,7 @@
             <ul class="flex space-x-6">
                 <li><a href="#inicio" class="text-gray-300 hover:text-white">Inicio</a></li>
                 <li><a href="#sobre-mi" class="text-gray-300 hover:text-white">Sobre Mí</a></li>
-                <li><a href="#proyectos" class="text-gray-300 hover:text-white">Proyectos</a></li>
+                <li><a href="#proyectos-privados-page" class="text-gray-300 hover:text-white">Proyectos</a></li>
                 <li><a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
             </ul>
         </div>
@@ -36,12 +37,33 @@
   <p id="especializacion" class="text-gray-400"></p>
 </section>
 
+<!-- Sección de Proyectos Privados -->
+<section id="proyectos-privados-page">
+  <h2 class="text-3xl font-semibold">Proyectos Privados</h2>
+  <div id="proyectos-privados" class="proyecto-container"></div>
+  
+  <!-- Botón de Ver Más / Ver Menos -->
+  <button id="verMasPrivados" class="ver-mas-btn" onclick="toggleVerMas('privados')">
+    <span id="iconPrivados">+</span>
+</button>
 
-<!-- Proyectos -->
-<section id="proyectos">
-  <h2 class="text-3xl font-semibold">Proyectos</h2>
-  <div id="proyectos-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
 </section>
+
+<!-- Sección de Proyectos Públicos -->
+<section id="proyectos-publicos-page">
+  <h2 class="text-3xl font-semibold">Proyectos Públicos</h2>
+  <div id="proyectos-publicos" class="proyecto-container"></div>
+  
+  <!-- Botón de Ver Más / Ver Menos -->
+  <button id="verMasPublicos" class="ver-mas-btn" onclick="toggleVerMas('publicos')">
+    <span id="iconPublicos">+</span>
+</button>
+</section>
+
+<!-- Modal para proyectos -->
+<div id="modal" class="modal">
+  <div id="modal-content" class="modal-content"></div>
+</div>
 
 <!-- Contacto -->
 <section id="contacto">
@@ -61,20 +83,12 @@
   <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
 </section>
 
-
-      <!-- Notificación de Copiado -->
-      <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
-
-  </section>
-
-    <!-- Scripts -->
+  <!-- Scripts -->
     <script src="js/cargaProyectos.js"></script>
     <script src="js/contacto.js"></script>
     <script src="js/scrollSuave.js"></script>
     <script src="js/cargaSobreMi.js"></script>
     <script src="js/animaciones.js"></script>
-
-
 
 </body>
 </html>

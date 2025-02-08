@@ -1,28 +1,113 @@
 {
   "proyectos": [
       {
-          "nombre": "Sistema de Gestión de Clientes",
-          "descripcion": "Aplicación WPF con .NET para gestionar clientes, facturación y reportes.",
-          "tecnologias": "C#, WPF, SQL Server",
-          "link": "https://github.com/tuusuario/proyecto1"
+          "nombre": "Controlador",
+          "tipo": "privado",
+          "descripcion": "Gestión centralizada de llaves electrónicas y control de acceso.",
+          "detalles": [
+              "Asignación y revocación de permisos de acceso en tiempo real.",
+              "Gestión remota de dispositivos electrónicos de acceso.",
+              "Registro y auditoría de accesos con historial detallado.",
+              "Interfaz intuitiva con control en tiempo real."
+          ],
+          "tecnologias": "C#, WPF, SOAP, RESTful API, Multithreading, XML, Logging"
       },
       {
-          "nombre": "API REST para E-Commerce",
-          "descripcion": "API RESTful en ASP.NET Core para manejar pedidos y clientes.",
-          "tecnologias": "ASP.NET Core, Entity Framework, SQL Server",
-          "link": "https://github.com/tuusuario/proyecto2"
+        "nombre": "Gestión de Áreas",
+        "tipo": "privado",
+        "descripcion": "Librería DLL en WPF para la gestión visual de estructuras jerárquicas en instalaciones.",
+        "detalles": [
+          "Representación jerárquica de áreas con expanders en WPF.",
+          "Indicadores visuales de estado y alarmas en cada área.",
+          "Interfaz de usuario intuitiva con controles modernos de WPF."
+        ],
+        "tecnologias": "C#, .NET, WPF, Expander, TreeView"
       },
       {
-          "nombre": "Dashboard de Monitoreo",
-          "descripcion": "Interfaz en WPF que muestra estadísticas en tiempo real.",
-          "tecnologias": "WPF, C#, API REST",
-          "link": "https://github.com/tuusuario/proyecto3"
+          "nombre": "Controlador",
+          "tipo": "privado",
+          "descripcion": "Solución de conectividad y monitoreo en tiempo real para sistemas de seguridad.",
+          "detalles": [
+              "Conexión persistente y monitoreo en tiempo real de dispositivos de seguridad.",
+              "Sincronización de variables y control de zonas de sensores.",
+              "Configuración y mantenimiento remoto de dispositivos.",
+              "Registro de eventos y notificaciones en AppVision."
+          ],
+          "tecnologias": "C#, .NET Framework, TCP, AppVision SDK, Multithreading, Regex"
       },
       {
-        "nombre": "Dashboard de Monitoreo",
-        "descripcion": "Interfaz en WPF que muestra estadísticas en tiempo real.",
-        "tecnologias": "WPF, C#, API REST",
-        "link": "https://github.com/tuusuario/proyecto4"
-    }
+        "nombre": "Gestión de Grupos",
+        "tipo": "privado",
+        "descripcion": "Librería DLL en WPF para administrar grupos con jerarquía y parámetros específicos.",
+        "detalles": [
+          "Organización de grupos y subgrupos en niveles jerárquicos.",
+          "Filtros avanzados y búsqueda por parámetros específicos.",
+          "Gestión de estados y alarmas en cada grupo."
+        ],
+        "tecnologias": "C#, .NET, WPF, AppVision API, Data Synchronization"
+      },
+      {
+          "nombre": "Controlador",
+          "tipo": "privado",
+          "descripcion": "Integración de videovigilancia y monitoreo de alarmas en tiempo real.",
+          "detalles": [
+              "Conexión asíncrona con API del videograbador para supervisión de eventos.",
+              "Captura y sincronización de datos multimedia en AppVision.",
+              "Implementación de heartbeat y reconexión automática.",
+              "Gestión multihilo para monitoreo escalable de videograbadores."
+          ],
+          "tecnologias": "C#, .NET Framework, API REST, OAuth, Multithreading, JSON"
+      },
+      {
+        "nombre": "Gestión de Instalaciones",
+        "tipo": "privado",
+        "descripcion": "Librería DLL en WPF para visualizar y gestionar instalaciones con un sistema de tarjetas interactivas.",
+        "detalles": [
+          "Visualización en formato de tarjetas con detalles clave.",
+          "Filtro y búsqueda de entidades según criterios avanzados.",
+          "Acceso rápido a información detallada de cada entidad."
+        ],
+        "tecnologias": "C#, .NET, WPF, Custom UI, Data Filtering"
+      },
+      {
+          "nombre": "Controlador",
+          "tipo": "privado",
+          "descripcion": "Solución para la gestión y monitoreo de eventos de comunicaciones en tiempo real.",
+          "detalles": [
+              "Monitoreo en tiempo real de eventos y llamadas usando WebSockets.",
+              "Procesamiento y registro de parámetros críticos en AppVision.",
+              "Gestión de variables y sincronización de eventos en la plataforma de gestión.",
+              "Reconexión automática y manejo de errores en caso de fallos de conexión."
+          ],
+          "tecnologias": "C#, .NET Framework, WebSockets, JSON, Multithreading, AppVision"
+      },
+      {
+          "nombre": "Controlador",
+          "tipo": "privado",
+          "descripcion": "Sistema de autenticación y control de accesos basado en ubicación para dispositivos.",
+          "detalles": [
+              "Autenticación basada en identificación personal (DNI).",
+              "Verificación de proximidad geográfica para control de acceso.",
+              "Monitoreo y control en tiempo real con procesamiento de eventos TCP.",
+              "Implementación del algoritmo de Haversine para validación de distancia."
+          ],
+          "tecnologias": "C#, .NET Framework, TCP, HTTP, JSON, Haversine Algorithm"
+      },
+      {
+        "nombre": "Free Entertainment Project",
+        "tipo": "publico",
+        "descripcion": "Aplicación de entretenimiento gratuito que reúne películas de dominio público, TV, radio y resúmenes de fútbol.",
+        "detalles": [
+          "Agrega contenido de entretenimiento de fuentes públicas en un solo lugar.",
+          "Interfaz de usuario moderna y funcional con diseño en Figma.",
+          "Uso de Firebase para gestión de datos en la nube.",
+          "Reproducción de contenido en streaming mediante ExoPlayer.",
+          "Arquitectura basada en MVVM y Clean Architecture.",
+          "Soporte para listas de reproducción en formato `.m3u8`.",
+          "Sistema de favoritos y personalización del contenido."
+        ],
+        "tecnologias": "Kotlin, Android Studio, ExoPlayer, Firebase, MVVM, Clean Architecture, HLS Streaming, Google Cloud",
+        "link": "github_fep"
+      }
   ]
 }

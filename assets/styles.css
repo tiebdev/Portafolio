@@ -26,26 +26,180 @@ body {
     overflow-x: hidden;
 }
 
+/* Espaciado para evitar que el título "Proyectos" se tape */
+#proyectos {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+/* Agregar margen inferior al título "Proyectos" */
+#proyectos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Ajuste del grid para mejorar la distribución */
+#proyectos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* Asegurar que las tarjetas no sean invisibles al cargar */
 .card {
-    background-color: #1e1e1e ; /* Color de las tarjetas */
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  opacity: 1; /* ANTES ESTABA EN 0, AHORA LO PONEMOS EN 1 */
+  transform: translateY(0); /* EVITA QUE LAS TARJETAS SE MUEVAN ARRIBA AL CARGAR */
 }
 
+/* Estilos para listas dentro de las tarjetas */
+.card ul {
+  padding-left: 1rem;
+}
+
+.card ul li {
+  margin-top: 0.5rem;
+}
+
+/* Cuando la tarjeta es visible en la pantalla */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto de hover mejorado */
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Ajuste de ancho y disposición en 'Sobre Mí' */
-#sobre-mi {
-  max-width: 800px; /* Limitar el ancho del contenido */
-  width: 90%; /* Ajuste responsive */
-  text-align: center; /* Alineación izquierda para mejor lectura */
-  margin: 0 auto; /* Centrar en pantalla */
-  padding: 2rem 0; /* Espaciado arriba y abajo */
+/* Efecto hover mejorado en las tarjetas */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
 }
+
+/* Asegurar que el modal se abra centrado en la pantalla */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrar el modal */
+  width: 90%;
+  max-width: 500px;
+  background: rgba(30, 30, 30, 0.95); /* Color uniforme sin esquinas negras */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 12px; /* Bordes redondeados sin esquinas negras */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Agrega desenfoque para más suavidad */
+}
+
+/* Ajuste para la caja de contenido del modal */
+.modal-content {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+  width: 100%;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Bloquear el scroll del body cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Espaciado adecuado en el modal */
+.modal-content p {
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.modal-content ul li {
+  margin-top: 0.5rem;
+}
+
+/* Estilizar los bordes para una mejor integración visual */
+.modal-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Para que los botones del modal estén alineados */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-buttons button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.modal-buttons .close-modal {
+  background: #333;
+  color: white;
+}
+
+.modal-buttons .close-modal:hover {
+  background: #444;
+}
+
+/* Botón de cierre sutil y centrado */
+.close-modal, .ver-codigo {
+  display: block;
+  background: #4f46e5;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1.5rem auto 0;
+  width: fit-content;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+}
+
+.close-modal:hover, .ver-codigo:hover {
+  background: #3730a3;
+}
+
+
+/* Ajuste en "Sobre Mí" */
+#sobre-mi {
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
 
 /* Ajustes en la tipografía de 'Sobre Mí' */
 #sobre-mi h2 {
@@ -55,13 +209,25 @@ body {
 
 #sobre-mi p {
   font-size: 1.2rem; /* Fuente más grande para mejor lectura */
-  margin-top: 1rem;
+  margin-top: 2rem;
   line-height: 1.8; /* Espaciado entre líneas más cómodo */
 }
 
 #proyectos h2 {
   font-size: 2.5rem; /* Título más grande */
   text-align: center;
+}
+
+/* Asegurar que "Contacto" esté completamente separado */
+#contacto {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem; /* Espaciado superior suficiente */
+  margin-top: 8rem; /* Crea espacio entre proyectos públicos y contacto */
 }
 
 #contacto h2 {
@@ -100,4 +266,98 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #4f46e5; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilos generales para las secciones de proyectos */
+.proyecto-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.proyecto-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 1rem; /* Se iguala con el margen anterior */
+}
+
+/* Ocultar los proyectos extra por defecto */
+.proyecto-container .extra {
+  display: none;
+}
+
+/* Cuando se expande, mostramos los proyectos extra */
+.proyecto-container.expandido .extra {
+  display: block;
+}
+
+/* Botón redondo de "Ver Más" y "Ver Menos" */
+.ver-mas-btn {
+  width: 55px;  /* Tamaño adecuado */
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4f46e5;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Evitar desplazamientos del símbolo */
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+/* Ajuste del icono "+" y "-" */
+.ver-mas-btn span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ver-mas-btn:hover {
+  background: #3730a3;
+  transform: scale(1.1);
+}
+
+
+
+/* Ajustar cada sección para ocupar toda la pantalla */
+#proyectos-privados-page, 
+#proyectos-publicos-page {
+  min-height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem; /* Mantiene separación con Contacto */
+  margin-bottom: 6rem; /* Agregamos un margen inferior para crear espacio */
+}
+
+/* Reducimos el espacio entre títulos y tarjetas */
+#proyectos-privados-page h2, 
+#proyectos-publicos-page h2 {
+  font-size: 2.15rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Ajustar el espacio entre títulos y las tarjetas */
+.proyecto-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem; /* Antes era 1.5rem, ahora es menor */
 }
