@@ -84,7 +84,7 @@ fetch('json/links.json')
     })
     .catch(error => console.error("Error cargando enlaces:", error));
 
-// Función para mostrar el modal y centrarlo en la pantalla
+// Función para mostrar el modal con animación suave
 function mostrarModal(proyecto) {
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-content");
@@ -105,15 +105,24 @@ function mostrarModal(proyecto) {
     `;
 
     modal.style.display = "flex";
+    setTimeout(() => modal.classList.add("show"), 10); // Inicia la animación después de activarlo
+
     modal.scrollIntoView({ behavior: "smooth", block: "center" });
-    document.body.classList.add("modal-open"); // Bloquea el scroll del body
+    //document.body.classList.add("modal-open"); // Bloquea el scroll del body
 }
 
-// Función para cerrar el modal y restaurar el scroll
+// Función para cerrar el modal con animación suave
 function cerrarModal() {
-    document.getElementById("modal").style.display = "none";
-    document.body.classList.remove("modal-open"); // Restaura el scroll
+    const modal = document.getElementById("modal");
+
+    modal.classList.remove("show"); // Inicia la animación de cierre
+
+    setTimeout(() => {
+        modal.style.display = "none"; 
+        document.body.classList.remove("modal-open"); // Restaura el scroll
+    }, 300); // Esperamos la animación antes de ocultarlo completamente
 }
+
 
 // Función para filtrar proyectos
 function filtrarProyectos(filtro) {

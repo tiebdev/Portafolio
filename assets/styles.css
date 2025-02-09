@@ -106,6 +106,14 @@ body {
   border-radius: 12px; /* Bordes redondeados sin esquinas negras */
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px); /* Agrega desenfoque para más suavidad */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Cuando el modal se muestra */
+.modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Aparece suavemente */
 }
 
 /* Ajuste para la caja de contenido del modal */
@@ -309,11 +317,10 @@ nav ul li a:hover {
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    /* Evitar desplazamientos del símbolo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Evitar desplazamientos del símbolo */
   text-align: center;
-  padding-bottom: 1rem;
-  margin-top: 2rem;
+  padding-bottom: 0.6rem;
+  margin-top: 1.8rem;
 }
 
 /* Ajuste del icono "+" y "-" */
@@ -331,8 +338,6 @@ nav ul li a:hover {
   background: #3730a3;
   transform: scale(1.1);
 }
-
-
 
 /* Ajustar cada sección para ocupar toda la pantalla */
 #proyectos-privados-page, 
