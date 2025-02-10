@@ -26,29 +26,6 @@
       {
           "nombre": "Controlador",
           "tipo": "privado",
-          "descripcion": "Solución de conectividad y monitoreo en tiempo real para sistemas de seguridad.",
-          "detalles": [
-              "Conexión persistente y monitoreo en tiempo real de dispositivos de seguridad.",
-              "Sincronización de variables y control de zonas de sensores.",
-              "Configuración y mantenimiento remoto de dispositivos.",
-              "Registro de eventos y notificaciones en AppVision."
-          ],
-          "tecnologias": "C#, .NET Framework, TCP, AppVision SDK, Multithreading, Regex"
-      },
-      {
-        "nombre": "Gestión de Grupos",
-        "tipo": "privado",
-        "descripcion": "Librería DLL en WPF para administrar grupos con jerarquía y parámetros específicos.",
-        "detalles": [
-          "Organización de grupos y subgrupos en niveles jerárquicos.",
-          "Filtros avanzados y búsqueda por parámetros específicos.",
-          "Gestión de estados y alarmas en cada grupo."
-        ],
-        "tecnologias": "C#, .NET, WPF, AppVision API, Data Synchronization"
-      },
-      {
-          "nombre": "Controlador",
-          "tipo": "privado",
           "descripcion": "Integración de videovigilancia y monitoreo de alarmas en tiempo real.",
           "detalles": [
               "Conexión asíncrona con API del videograbador para supervisión de eventos.",
@@ -94,6 +71,29 @@
           "tecnologias": "C#, .NET Framework, TCP, HTTP, JSON, Haversine Algorithm"
       },
       {
+        "nombre": "Gestión de Grupos",
+        "tipo": "privado",
+        "descripcion": "Librería DLL en WPF para administrar grupos con jerarquía y parámetros específicos.",
+        "detalles": [
+          "Organización de grupos y subgrupos en niveles jerárquicos.",
+          "Filtros avanzados y búsqueda por parámetros específicos.",
+          "Gestión de estados y alarmas en cada grupo."
+        ],
+        "tecnologias": "C#, .NET, WPF, AppVision API, Data Synchronization"
+      },
+      {
+        "nombre": "Controlador",
+        "tipo": "privado",
+        "descripcion": "Solución de conectividad y monitoreo en tiempo real para sistemas de seguridad.",
+        "detalles": [
+            "Conexión persistente y monitoreo en tiempo real de dispositivos de seguridad.",
+            "Sincronización de variables y control de zonas de sensores.",
+            "Configuración y mantenimiento remoto de dispositivos.",
+            "Registro de eventos y notificaciones en AppVision."
+        ],
+        "tecnologias": "C#, .NET Framework, TCP, AppVision SDK, Multithreading, Regex"
+      },
+      {
         "nombre": "Free Entertainment Project",
         "tipo": "publico",
         "descripcion": "Aplicación de entretenimiento gratuito que reúne películas de dominio público, TV, radio y resúmenes de fútbol.",
@@ -108,6 +108,52 @@
         ],
         "tecnologias": "Kotlin, Android Studio, ExoPlayer, Firebase, MVVM, Clean Architecture, HLS Streaming, Google Cloud",
         "link": "github_fep"
+      },
+      {
+        "nombre": "Blog API",
+        "tipo": "publico",
+        "descripcion": "API REST para la gestión de un blog privado con autenticación JWT, control de acceso y almacenamiento en MongoDB.",
+        "detalles": [
+            "Autenticación y autorización con JWT para acceso seguro.",
+            "Registro de usuarios limitado a una lista específica de colaboradores.",
+            "Creación, actualización y eliminación de posts con asignación automática del autor.",
+            "Gestión de comentarios en los posts, vinculados a usuarios autenticados.",
+            "Configuración de CORS para permitir acceso desde clientes externos.",
+            "Registro de eventos y errores con ILogger para monitoreo y depuración."
+        ],
+        "tecnologias": "C#, .NET 6, ASP.NET Core, MongoDB, JWT, Swagger, CORS",
+        "link": "github_blogApi"
+      },
+      {
+        "nombre": "Plataforma de Gestión de Contenidos",
+        "tipo": "publico",
+        "descripcion": "Sistema de administración y publicación de artículos, gestión de usuarios y control de contenido.",
+        "detalles": [
+            "Autenticación y autorización con JWT, protegiendo rutas sensibles.",
+            "Gestión de usuarios con inicio de sesión, registro y control de sesiones.",
+            "Creación, edición y eliminación de artículos con asignación automática del autor.",
+            "Almacenamiento y recuperación de imágenes de perfil y artículos.",
+            "Panel de administración con interfaz interactiva basada en Bootstrap.",
+            "Validación de formularios y carga dinámica de contenido sin recargar la página.",
+            "Control de acceso restringido a los artículos según el usuario autenticado.",
+            "Manejo de errores y notificaciones mediante modales interactivos."
+        ],
+        "tecnologias": "MongoDB, JWT, HTML, CSS, JavaScript, Bootstrap, Fetch API",
+        "link": "github_techBlog"
+      },
+      {
+        "nombre": "Mi Portafolio Personal",
+        "tipo": "publico",
+        "descripcion": "Sitio web profesional para mostrar mis proyectos, experiencia y contacto.",
+        "detalles": [
+          "Desarrollado con HTML, CSS y JavaScript.",
+          "Usa Tailwind CSS para un diseño moderno y responsivo.",
+          "Cargado dinámicamente desde archivos JSON para mejor mantenimiento.",
+          "Implementa modales interactivos para mostrar detalles de proyectos.",
+          "Soporte para proyectos públicos y privados con una UX optimizada."
+        ],
+        "tecnologias": "HTML, CSS, JavaScript, Tailwind CSS, JSON",
+        "link": "github_portafolio"
       }
   ]
 }

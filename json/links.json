@@ -1,6 +1,9 @@
 {
   "email": "tucorreo@example.com",
   "linkedin": "https://www.linkedin.com/in/ridouantieb/",
-  "github": "https://github.com/rido-dev",
-  "github_fep": "https://github.com/rido-dev/FreeEntertainmentProject/"
+  "github": "https://github.com/ridudev/ridudev",
+  "github_fep": "https://github.com/ridudev/FreeEntertainmentProject/",
+  "github_portafolio":"https://github.com/ridudev/Portafolio",
+  "github_techBlog":"https://github.com/ridudev/BlogApiFront",
+  "github_blogApi":"https://github.com/ridudev/BlogApiBack"
 }
