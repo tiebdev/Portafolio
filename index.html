@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIEB.DEV</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TIEB.dev</title>
+      <!-- Scripts -->
+      <script src="js/burguer.js"></script>
+      <script src="js/cargaProyectos.js"></script>
+      <script src="js/contacto.js"></script>
+      <script src="js/scrollSuave.js"></script>
+      <script src="js/cargaSobreMi.js"></script>
+      <script src="js/animaciones.js"></script>
+      <script src="js/upButton.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
 </head>
-
 <body class="font-sans bg-gray-900 text-gray-200">
 
-    <!-- Barra de Navegación -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg py-4 z-50">
-        <div class="max-w-5xl mx-auto flex justify-between items-center px-6">
-            <h1 class="text-xl font-bold text-white"></h1>
-            <ul class="flex space-x-6">
-                <li><a href="#inicio" class="text-gray-300 hover:text-white">Inicio</a></li>
-                <li><a href="#sobre-mi" class="text-gray-300 hover:text-white">Sobre Mí</a></li>
-                <li><a href="#proyectos-privados-page" class="text-gray-300 hover:text-white">Proyectos</a></li>
-                <li><a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- Barra de Navegación -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg py-4 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+        <h1 class="text-xl font-bold text-white"></h1>
+
+    <!-- Menú Hamburguesa (visible solo en móviles) -->
+    <div id="menu-icon" class="menu-icon md:hidden cursor-pointer">
+        <span class="block w-8 h-1 bg-white mb-1"></span>
+        <span class="block w-8 h-1 bg-white mb-1"></span>
+        <span class="block w-8 h-1 bg-white"></span> 
+    </div>
+
+    <!-- Enlaces de navegación -->
+    <ul id="nav-links" class="hidden md:flex space-x-6">
+        <li><a href="#inicio" class="text-gray-300 hover:text-white">Inicio</a></li>
+        <li><a href="#sobre-mi" class="text-gray-300 hover:text-white">Sobre Mí</a></li>
+        <li><a href="#proyectos-privados-page" class="text-gray-300 hover:text-white">Proyectos</a></li>
+        <li><a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
+    </ul>
+    </div>
+
+    <!-- Menú Responsive (se despliega con la hamburguesa) -->
+    <ul id="mobile-menu" class="hidden flex-col absolute top-16 left-0 w-full bg-gray-800 text-center md:hidden">
+        <li><a href="#inicio" class="block py-3 text-gray-300 hover:text-white">Inicio</a></li>
+        <li><a href="#sobre-mi" class="block py-3 text-gray-300 hover:text-white">Sobre Mí</a></li>
+        <li><a href="#proyectos-privados-page" class="block py-3 text-gray-300 hover:text-white">Proyectos</a></li>
+        <li><a href="#contacto" class="block py-3 text-gray-300 hover:text-white">Contacto</a></li>
+    </ul>
+</nav>
 
 <!-- Inicio -->
 <section id="inicio">
@@ -76,15 +100,15 @@
   <h2 class="text-3xl font-semibold">Contacto</h2>
   <p class="text-gray-400 mt-4">Puedes encontrarme en:</p>
   <div class="mt-4">
-    <a id="linkedin" href="#" class="text-blue-500 mx-2">LinkedIn</a>
-    <a id="github" href="#" class="text-blue-500 mx-2">GitHub</a>
+    <a id="linkedin" href="#" class="text-indigo-500 mx-2">LinkedIn</a>
+    <a id="github" href="#" class="text-indigo-500 mx-2">GitHub</a>
   </div>
 
   <!-- Barra de contacto con email -->
   <div class="mt-6 flex justify-center items-center bg-gray-800 p-4 rounded-lg shadow-lg max-w-lg mx-auto">
       <input id="email" type="text" readonly class="bg-gray-700 text-gray-200 w-full p-2 rounded-l-lg text-center">
     <!-- Botón de enviar correo con icono Heroicon -->
-    <button id="sendEmail" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg flex items-center justify-center">
+    <button id="sendEmail" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-r-lg flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
       </svg>
@@ -100,12 +124,11 @@
     <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
 </section>
 
-<!-- Scripts -->
-  <script src="js/cargaProyectos.js"></script>
-  <script src="js/contacto.js"></script>
-  <!-- --> <script src="js/scrollSuave.js"></script>
-  <script src="js/cargaSobreMi.js"></script>
-  <script src="js/animaciones.js"></script>
+<button id="scrollTopBtn" class="scroll-top-btn hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+    <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1-1.06 1.06l-3.22-3.22V16.5a.75.75 0 0 1-1.5 0V4.81L8.03 8.03a.75.75 0 0 1-1.06-1.06l4.5-4.5ZM3 15.75a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+  </svg>
+</button>
 
 </body>
 </html>

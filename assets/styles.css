@@ -1,7 +1,5 @@
-/* Asegurar que cada sección ocupe toda la pantalla */
-/* Todas las secciones estarán inicialmente invisibles */
 section {
-  min-height: 100vh; /* Mínimo 100% de la pantalla */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,20 +10,18 @@ section {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Cuando una sección se vuelve visible */
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 body {
-    background-color: #121212; /* Mantener fondo oscuro original */
-    color: #e0e0e0; /* Color de texto original */
+    background-color: #121212;
+    color: #e0e0e0; 
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
-/* Espaciado para evitar que el título "Proyectos" se tape */
 #proyectos {
   display: flex;
   flex-direction: column;
@@ -33,12 +29,10 @@ body {
   align-items: center;
 }
 
-/* Agregar margen inferior al título "Proyectos" */
 #proyectos h2 {
   font-size: 2.5rem;
 }
 
-/* Ajuste del grid para mejorar la distribución */
 #proyectos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -47,7 +41,6 @@ body {
   justify-content: center;
 }
 
-/* Asegurar que las tarjetas no sean invisibles al cargar */
 .card {
   background-color: #1e1e1e;
   padding: 1.5rem;
@@ -56,11 +49,10 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
   text-align: center;
-  opacity: 1; /* ANTES ESTABA EN 0, AHORA LO PONEMOS EN 1 */
-  transform: translateY(0); /* EVITA QUE LAS TARJETAS SE MUEVAN ARRIBA AL CARGAR */
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
-/* Estilos para listas dentro de las tarjetas */
 .card ul {
   padding-left: 1rem;
 }
@@ -69,51 +61,40 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Cuando la tarjeta es visible en la pantalla */
 .card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Efecto de hover mejorado */
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Efecto hover mejorado en las tarjetas */
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Asegurar que el modal se abra centrado en la pantalla */
 .modal {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centrar el modal */
+  transform: translate(-50%, -50%); 
   width: 90%;
   max-width: 500px;
-  background: rgba(30, 30, 30, 0.95); /* Color uniforme sin esquinas negras */
+  background: rgba(30, 30, 30, 0.95); 
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  border-radius: 12px; /* Bordes redondeados sin esquinas negras */
+  border-radius: 12px; 
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px); /* Agrega desenfoque para más suavidad */
-  opacity: 0; /* Inicialmente invisible */
+  backdrop-filter: blur(10px); 
+  opacity: 0; 
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
-/* Cuando el modal se muestra */
 .modal.show {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1); /* Aparece suavemente */
+  transform: translate(-50%, -50%) scale(1);
 }
 
-/* Ajuste para la caja de contenido del modal */
 .modal-content {
   background: transparent;
   padding: 2rem;
@@ -124,12 +105,10 @@ body {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Bloquear el scroll del body cuando el modal está abierto */
 body.modal-open {
   overflow: hidden;
 }
 
-/* Espaciado adecuado en el modal */
 .modal-content p {
   margin-bottom: 1rem;
 }
@@ -143,7 +122,6 @@ body.modal-open {
   margin-top: 0.5rem;
 }
 
-/* Estilizar los bordes para una mejor integración visual */
 .modal-content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -151,7 +129,6 @@ body.modal-open {
   text-align: center;
 }
 
-/* Para que los botones del modal estén alineados */
 .modal-buttons {
   display: flex;
   justify-content: center;
@@ -176,7 +153,6 @@ body.modal-open {
   background: #444;
 }
 
-/* Botón de cierre sutil y centrado */
 .close-modal, .ver-codigo {
   display: block;
   background: #4f46e5;
@@ -195,38 +171,34 @@ body.modal-open {
   background: #3730a3;
 }
 
-/* Ajuste en "Sobre Mí" */
 #sobre-mi {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 800px; /* 🔹 Limita el ancho del contenido */
-  width: 90%; /* 🔹 Se adapta al tamaño de la pantalla */
-  margin: 0 auto; /* 🔹 Centra el contenido horizontalmente */
-  padding: 2rem 1rem; /* 🔹 Espaciado mínimo para evitar que quede pegado */
+  max-width: 800px; 
+  width: 90%;
+  margin: 0 auto; 
+  padding: 2rem 1rem;
 }
 
-/* Ajustes en la tipografía de 'Sobre Mí' */
 #sobre-mi h2 {
-  font-size: 2.5rem; /* Título más grande */
-  margin-bottom: 1rem; /* 🔹 Separación mínima entre el título y el texto */
+  font-size: 2.5rem; 
+  margin-bottom: 1rem; 
 }
 
 #sobre-mi p {
-  font-size: 1.2rem; /* Fuente más grande para mejor lectura */
-  line-height: 1.8; /* 🔹 Espaciado adecuado entre líneas */
-  margin-bottom: 1rem; /* 🔹 Espaciado entre párrafos */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem; 
 }
 
-
 #proyectos h2 {
-  font-size: 2.5rem; /* Título más grande */
+  font-size: 2.5rem; 
   text-align: center;
 }
 
-/* Asegurar que "Contacto" esté completamente separado */
 #contacto {
   min-height: 100vh;
   display: flex;
@@ -237,14 +209,13 @@ body.modal-open {
 }
 
 #contacto h2 {
-  font-size: 2.5rem; /* Título más grande */
+  font-size: 2.5rem; 
   text-align: center;
 }
 
-/* Estilos para la barra de navegación */
 nav {
   display: flex;
-  justify-content: center; /* Centra los elementos */
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: #1e1e1e;
@@ -255,14 +226,12 @@ nav {
   padding: 1rem 0;
 }
 
-/* Centrar los elementos del menú */
 nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
 
-/* Estilos para los enlaces de la barra de navegación */
 nav ul li a {
   text-decoration: none;
   color: #e0e0e0;
@@ -271,10 +240,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #4f46e5; /* Cambia de color al pasar el mouse */
+  color: #4f46e5; 
 }
 
-/* Estilos generales para las secciones de proyectos */
 .proyecto-section {
   margin-top: 4rem;
   text-align: center;
@@ -289,19 +257,16 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-/* Ocultar los proyectos extra por defecto */
 .proyecto-container .extra {
   display: none;
 }
 
-/* Cuando se expande, mostramos los proyectos extra */
 .proyecto-container.expandido .extra {
   display: block;
 }
 
-/* Botón redondo de "Ver Más" y "Ver Menos" */
 .ver-mas-btn {
-  width: 55px;  /* Tamaño adecuado */
+  width: 55px;  
   height: 55px;
   display: flex;
   justify-content: center;
@@ -314,13 +279,12 @@ nav ul li a:hover {
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Evitar desplazamientos del símbolo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
   text-align: center;
   padding-bottom: 0.6rem;
   margin-top: 1.8rem;
 }
 
-/* Ajuste del icono "+" y "-" */
 .ver-mas-btn span {
   font-size: 2rem;
   font-weight: bold;
@@ -336,10 +300,9 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-/* Ajustar cada sección para ocupar toda la pantalla */
 #proyectos-privados-page, 
 #proyectos-publicos-page {
-  min-height: 100vh; /* Ocupa toda la pantalla */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,7 +310,6 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Reducimos el espacio entre títulos y tarjetas */
 #proyectos-privados-page h2, 
 #proyectos-publicos-page h2 {
   font-size: 2.15rem;
@@ -360,10 +322,9 @@ nav ul li a:hover {
   align-items: center;
 }
 
-/* Ajustar el espacio entre títulos y las tarjetas */
 .proyecto-section h3 {
   font-size: 2rem;
-  margin-bottom: 1rem; /* Antes era 1.5rem, ahora es menor */
+  margin-bottom: 1rem; 
 }
 
 .cv-btn {
@@ -383,4 +344,120 @@ nav ul li a:hover {
 .cv-btn:hover {
   background: #3730a3;
   transform: scale(1.05);
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4f46e5; 
+  color: white;
+  border: none;
+  width: 50px;  
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; 
+}
+
+.scroll-top-btn.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.scroll-top-btn:hover {
+  background: #3730a3;
+  transform: scale(1.1);
+}
+
+
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#mobile-menu.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0; 
+  }
+
+  section {
+    padding: 2rem 1rem; 
+  }
+
+  .proyecto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+   nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0; 
+    white-space: nowrap; 
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li a {
+    font-size: 1rem; 
+    padding: 0.5rem; 
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    backdrop-filter: none; 
+    background: rgba(30, 30, 30, 0.98); 
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .modal-content {
+    background: transparent; 
+    border-radius: 10px;
+    text-align: center; 
+  }
+
+  .modal.show {
+    transform: translate(-50%, -50%) scale(1); 
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .close-modal, .ver-codigo {
+    font-size: 1rem;
+    width: 100%; 
+    text-align: center;
+  }
 }
