@@ -35,6 +35,12 @@
   <p id="descripcion" class="text-gray-400"></p>
   <p id="trayectoria" class="text-gray-400"></p>
   <p id="especializacion" class="text-gray-400"></p>
+
+  <!-- Botón para descargar el CV -->
+  <a href="assets/Ridouan Tieb CV.pdf" download="Ridouan-Tieb-CV.pdf" 
+    class="cv-btn flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+    📄 Descargar CV
+  </a>
 </section>
 
 <!-- Sección de Proyectos Privados -->
@@ -45,8 +51,7 @@
   <!-- Botón de Ver Más / Ver Menos -->
   <button id="verMasPrivados" class="ver-mas-btn" onclick="toggleVerMas('privados')">
     <span id="iconPrivados">+</span>
-</button>
-
+  </button>
 </section>
 
 <!-- Sección de Proyectos Públicos -->
@@ -57,7 +62,7 @@
   <!-- Botón de Ver Más / Ver Menos -->
   <button id="verMasPublicos" class="ver-mas-btn" onclick="toggleVerMas('publicos')">
     <span id="iconPublicos">+</span>
-</button>
+  </button>
 </section>
 
 <!-- Modal para proyectos -->
@@ -70,38 +75,36 @@
   <h2 class="text-3xl font-semibold">Contacto</h2>
   <p class="text-gray-400 mt-4">Puedes encontrarme en:</p>
   <div class="mt-4">
-      <a id="linkedin" href="#" class="text-blue-500 mx-2">LinkedIn</a>
-      <a id="github" href="#" class="text-blue-500 mx-2">GitHub</a>
+    <a id="linkedin" href="#" class="text-blue-500 mx-2">LinkedIn</a>
+    <a id="github" href="#" class="text-blue-500 mx-2">GitHub</a>
   </div>
 
   <!-- Barra de contacto con email -->
   <div class="mt-6 flex justify-center items-center bg-gray-800 p-4 rounded-lg shadow-lg max-w-lg mx-auto">
       <input id="email" type="text" readonly class="bg-gray-700 text-gray-200 w-full p-2 rounded-l-lg text-center">
-<!-- Botón de enviar correo con icono Heroicon -->
-<button id="sendEmail" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg flex items-center justify-center">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-  </svg>
-</button>
+    <!-- Botón de enviar correo con icono Heroicon -->
+    <button id="sendEmail" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+      </svg>
+    </button>
 
-<!-- Botón de copiar email con icono Heroicon -->
-<button id="copyEmail" class="ml-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
-  </svg>  
-</button>
-
-
+    <!-- Botón de copiar email con icono Heroicon -->
+    <button id="copyEmail" class="ml-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+      </svg>  
+    </button>
   </div>
-  <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
+    <p id="copyNotification" class="text-green-400 mt-3 hidden">Correo copiado al portapapeles ✅</p>
 </section>
 
-  <!-- Scripts -->
-    <script src="js/cargaProyectos.js"></script>
-    <script src="js/contacto.js"></script>
-    <script src="js/scrollSuave.js"></script>
-    <script src="js/cargaSobreMi.js"></script>
-    <script src="js/animaciones.js"></script>
+<!-- Scripts -->
+  <script src="js/cargaProyectos.js"></script>
+  <script src="js/contacto.js"></script>
+  <!-- --> <script src="js/scrollSuave.js"></script>
+  <script src="js/cargaSobreMi.js"></script>
+  <script src="js/animaciones.js"></script>
 
 </body>
 </html>

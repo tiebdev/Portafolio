@@ -7,7 +7,6 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -28,15 +27,15 @@ body {
 
 /* Espaciado para evitar que el título "Proyectos" se tape */
 #proyectos {
-  padding-top: 8rem;
-  padding-bottom: 4rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Agregar margen inferior al título "Proyectos" */
 #proyectos h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.8rem;
 }
 
 /* Ajuste del grid para mejorar la distribución */
@@ -44,10 +43,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 1rem;
+  justify-content: center;
 }
 
 /* Asegurar que las tarjetas no sean invisibles al cargar */
@@ -198,28 +195,31 @@ body.modal-open {
   background: #3730a3;
 }
 
-
 /* Ajuste en "Sobre Mí" */
 #sobre-mi {
-  max-width: 800px;
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0 auto;
-  padding: 4rem 0;
+  max-width: 800px; /* 🔹 Limita el ancho del contenido */
+  width: 90%; /* 🔹 Se adapta al tamaño de la pantalla */
+  margin: 0 auto; /* 🔹 Centra el contenido horizontalmente */
+  padding: 2rem 1rem; /* 🔹 Espaciado mínimo para evitar que quede pegado */
 }
-
 
 /* Ajustes en la tipografía de 'Sobre Mí' */
 #sobre-mi h2 {
   font-size: 2.5rem; /* Título más grande */
-  text-align: center;
+  margin-bottom: 1rem; /* 🔹 Separación mínima entre el título y el texto */
 }
 
 #sobre-mi p {
   font-size: 1.2rem; /* Fuente más grande para mejor lectura */
-  margin-top: 2rem;
-  line-height: 1.8; /* Espaciado entre líneas más cómodo */
+  line-height: 1.8; /* 🔹 Espaciado adecuado entre líneas */
+  margin-bottom: 1rem; /* 🔹 Espaciado entre párrafos */
 }
+
 
 #proyectos h2 {
   font-size: 2.5rem; /* Título más grande */
@@ -234,8 +234,6 @@ body.modal-open {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 6rem 2rem; /* Espaciado superior suficiente */
-  margin-top: 8rem; /* Crea espacio entre proyectos públicos y contacto */
 }
 
 #contacto h2 {
@@ -289,7 +287,6 @@ nav ul li a:hover {
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 1rem; /* Se iguala con el margen anterior */
 }
 
 /* Ocultar los proyectos extra por defecto */
@@ -348,8 +345,6 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem; /* Mantiene separación con Contacto */
-  margin-bottom: 6rem; /* Agregamos un margen inferior para crear espacio */
 }
 
 /* Reducimos el espacio entre títulos y tarjetas */
@@ -359,10 +354,33 @@ nav ul li a:hover {
   margin-bottom: 4rem;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Ajustar el espacio entre títulos y las tarjetas */
 .proyecto-section h3 {
   font-size: 2rem;
   margin-bottom: 1rem; /* Antes era 1.5rem, ahora es menor */
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #4f46e5;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-top: 3rem;
+}
+
+.cv-btn:hover {
+  background: #3730a3;
+  transform: scale(1.05);
 }

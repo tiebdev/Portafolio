@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Solo habilitamos el desplazamiento automático en escritorio
-  if (window.innerWidth > 768) {
+  /*if (window.innerWidth > 768) {
     let lastScrollTop = 0;
     window.addEventListener("wheel", (event) => {
         const direction = event.deltaY > 0 ? "down" : "up";
@@ -35,5 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-}
+    }*/
 });
