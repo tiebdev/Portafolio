@@ -104,11 +104,12 @@ function mostrarModal(proyecto) {
         </div>
     `;
 
+    modalContent.scrollTop = 0;
     modal.style.display = "flex";
     setTimeout(() => modal.classList.add("show"), 10); // Inicia la animación después de activarlo
 
     modal.scrollIntoView({ behavior: "smooth", block: "center" });
-    //document.body.classList.add("modal-open"); // Bloquea el scroll del body
+    document.body.classList.add("modal-open"); // Bloquea el scroll del body
 }
 
 // Función para cerrar el modal con animación suave

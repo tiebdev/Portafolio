@@ -106,7 +106,7 @@
           "Soporte para listas de reproducción en formato `.m3u8`.",
           "Sistema de favoritos y personalización del contenido."
         ],
-        "tecnologias": "Kotlin, Android Studio, ExoPlayer, Firebase, MVVM, Clean Architecture, HLS Streaming, Google Cloud",
+        "tecnologias": "Kotlin, Android Studio, ExoPlayer, Firebase, MVVM, Clean Architecture, HLS Streaming",
         "link": "github_fep"
       },
       {

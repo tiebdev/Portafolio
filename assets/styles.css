@@ -394,6 +394,7 @@ nav ul li a:hover {
   display: flex;
 }
 
+
 @media (max-width: 768px) {
   body {
     padding: 0; 
@@ -433,6 +434,7 @@ nav ul li a:hover {
   .modal {
     width: 90%;
     max-width: 500px;
+    max-height: 85vh;
     height: auto;
     backdrop-filter: none; 
     background: rgba(30, 30, 30, 0.98); 
@@ -444,6 +446,8 @@ nav ul li a:hover {
     background: transparent; 
     border-radius: 10px;
     text-align: center; 
+    overflow-y: auto; 
+    max-height: 75vh;
   }
 
   .modal.show {
@@ -459,5 +463,11 @@ nav ul li a:hover {
     font-size: 1rem;
     width: 100%; 
     text-align: center;
+  }
+
+  body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 }
