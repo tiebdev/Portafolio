@@ -122,11 +122,11 @@ function cerrarModal() {
         modal.style.display = "none"; 
         document.body.classList.remove("modal-open"); // Restaura el scroll de la web
 
-        // Reiniciar el scroll interno del modal sin afectar la página
         modal.scrollTop = 0;
+
+        history.replaceState(null, null, " "); // Elimina el hash de la URL si es que hay alguno
     }, 300); // Esperamos la animación antes de ocultarlo completamente
 }
-
 
 // Función para filtrar proyectos
 function filtrarProyectos(filtro) {
