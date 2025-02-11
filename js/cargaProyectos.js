@@ -109,6 +109,7 @@ function mostrarModal(proyecto) {
 
     modal.scrollIntoView({ behavior: "smooth", block: "center" });
     document.body.classList.add("modal-open"); // Bloquea el scroll del body
+    modalContent.scrollTop = 0;
 }
 
 // Función para cerrar el modal con animación suave
