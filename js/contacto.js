@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch('/public/json/links.json')
+  fetch('/json/links.json')
       .then(response => response.json())
       .then(data => {
           document.getElementById("email").value = data.email;

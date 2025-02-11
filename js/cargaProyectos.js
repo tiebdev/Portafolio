@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/public/json/links.json')
+    fetch('/json/links.json')
         .then(response => response.json())
         .then(linksData => {
-            fetch('/public/json/proyectos.json')
+            fetch('/json/proyectos.json')
                 .then(response => response.json())
                 .then(data => {
                     renderizarProyectos(data.proyectos, linksData);

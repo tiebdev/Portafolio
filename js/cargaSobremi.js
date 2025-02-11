@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch('/public/json/sobremi.json')
+  fetch('/json/sobremi.json')
       .then(response => response.json())
       .then(data => {
           document.getElementById("descripcion").textContent = data.descripcion;
