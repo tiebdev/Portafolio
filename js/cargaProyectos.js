@@ -112,7 +112,7 @@ function mostrarModal(proyecto) {
     document.body.classList.add("modal-open"); // Bloquea el scroll del body
 }
 
-// Función para cerrar el modal con animación suave
+// Función para cerrar el modal con animación suave sin afectar el scroll de la web
 function cerrarModal() {
     const modal = document.getElementById("modal");
 
@@ -120,7 +120,10 @@ function cerrarModal() {
 
     setTimeout(() => {
         modal.style.display = "none"; 
-        document.body.classList.remove("modal-open"); // Restaura el scroll
+        document.body.classList.remove("modal-open"); // Restaura el scroll de la web
+
+        // Reiniciar el scroll interno del modal sin afectar la página
+        modal.scrollTop = 0;
     }, 300); // Esperamos la animación antes de ocultarlo completamente
 }
 
