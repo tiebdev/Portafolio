@@ -84,12 +84,12 @@ fetch('json/links.json')
     })
     .catch(error => console.error("Error cargando enlaces:", error));
 
-
-// Función para mostrar el modal sin mover la página
+// Función para mostrar el modal con animación suave
 function mostrarModal(proyecto) {
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-content");
 
+    // Verificamos si el proyecto es público y recuperamos su enlace correcto
     let githubLink = proyecto.tipo === "publico" ? enlaces[proyecto.link] : "";
 
     modalContent.innerHTML = `
@@ -105,33 +105,22 @@ function mostrarModal(proyecto) {
     `;
 
     modal.style.display = "flex";
+    setTimeout(() => modal.classList.add("show"), 10); // Inicia la animación después de activarlo
 
-    document.body.classList.add("modal-open");
-
-    // Guardar la posición actual del scroll de la página
-    document.body.dataset.scrollY = window.scrollY;
-
-    // Bloquear el scroll de la página sin moverla de sitio
-    document.body.style.top = `-${window.scrollY}px`;
-    document.body.style.position = "fixed";
+    modal.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.body.classList.add("modal-open"); // Bloquea el scroll del body
 }
 
-
-// Función para cerrar el modal sin que la página haga scroll involuntario
+// Función para cerrar el modal con animación suave
 function cerrarModal() {
     const modal = document.getElementById("modal");
 
-    modal.classList.remove("show"); 
+    modal.classList.remove("show"); // Inicia la animación de cierre
 
     setTimeout(() => {
         modal.style.display = "none"; 
-
-        document.body.classList.remove("modal-open");
-        document.body.style.position = "";
-        document.body.style.top = "";
-        window.scrollTo(0, parseInt(document.body.dataset.scrollY || "0"));
-        
-    }, 300);
+        document.body.classList.remove("modal-open"); // Restaura el scroll
+    }, 300); // Esperamos la animación antes de ocultarlo completamente
 }
 
 

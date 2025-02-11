@@ -467,7 +467,5 @@ nav ul li a:hover {
 
   body.modal-open {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
   }
 }
