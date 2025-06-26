@@ -23,8 +23,8 @@ Este portafolio se encuentra en producción gracias a **Vercel**, lo que permite
 
 ## 📬 Contacto
 Si quieres ponerte en contacto conmigo, puedes hacerlo a través de:  
-📩 **Email:** [tieb.dev@gmail.com](mailto:tieb.dev@gmail.com)  
-🔗 **LinkedIn:** [linkedin.com/in/ridouantieb](https://linkedin.com/in/ridouantieb)  
+📩 **Email:** [ridouan@tieb.dev](mailto:ridouan@tieb.dev)
+🔗 **LinkedIn:** [linkedin.com/in/ridouantieb](https://linkedin.com/in/ridouantieb)
 
 ---
 
